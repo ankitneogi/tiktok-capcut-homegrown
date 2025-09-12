@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* TikTok x CapCut Program Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Black and white base */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Mint primary colors */
+    --primary: 162 87% 68%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary mint variants */
+    --secondary: 162 87% 68%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 162 87% 68%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 162 87% 68%;
 
-    --radius: 0.5rem;
+    /* Mint color variations */
+    --mint: 162 87% 68%;
+    --mint-light: 162 87% 91%;
+    --mint-dark: 184 36% 41%;
+    --mint-darker: 180 36% 30%;
+
+    /* Gradients */
+    --gradient-mint: linear-gradient(135deg, hsl(162, 87%, 68%), hsl(162, 87%, 91%));
+    --gradient-teal: linear-gradient(135deg, hsl(184, 36%, 41%), hsl(180, 44%, 57%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(162, 87%, 68%) 100%);
+
+    /* Shadows and effects */
+    --shadow-mint: 0 10px 30px -10px hsl(162 87% 68% / 0.3);
+    --shadow-glow: 0 0 40px hsl(162 87% 68% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
