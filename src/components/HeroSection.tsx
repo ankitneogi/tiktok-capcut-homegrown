@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-import { Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -56,25 +55,11 @@ const HeroSection = () => {
           Apply Now
         </Button>
 
-        {/* Video Teaser */}
-        <div className="mt-16 relative max-w-2xl mx-auto">
-          <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-mint/20">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-mint rounded-full flex items-center justify-center">
-                <Play className="w-6 h-6 text-black fill-black" />
-              </div>
-              <div>
-                <h3 className="text-white font-bold">Watch the Program Overview</h3>
-                <p className="text-gray-400 text-sm">See why TikTok trusts HOME</p>
-              </div>
-            </div>
-            <div className="aspect-video bg-gradient-teal rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <Play className="w-16 h-16 text-white/60 mx-auto mb-2" />
-                <p className="text-white/60">Video placeholder</p>
-              </div>
-            </div>
-          </div>
+        {/* Replaced Video Teaser with Text */}
+        <div className="mt-16 relative max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-white font-semibold leading-relaxed bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-mint/20">
+            The only program in which you earn by editing your content with CapCut, without new dedicated content needed.
+          </p>
         </div>
       </div>
     </section>
