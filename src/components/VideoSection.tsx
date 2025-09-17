@@ -13,7 +13,7 @@ const VideoSection = () => {
           </p>
           
           {/* Program Description */}
-          <div className="bg-gradient-to-r from-mint/10 to-transparent border border-mint/20 rounded-2xl p-6 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-mint/10 to-transparent border border-mint/20 rounded-2xl p-6 max-w-4xl mx-auto mb-8">
             <p className="text-lg md:text-xl text-white font-bold leading-relaxed">
               The TikTok x CapCut Program is the only program where you can earn by editing your existing content with CapCut — no new dedicated content needed.
             </p>

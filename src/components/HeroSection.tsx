@@ -21,16 +21,16 @@ const HeroSection = () => {
         </div>
 
         {/* Logo Row */}
-        <div className="flex items-center justify-center gap-8 mb-12 flex-wrap">
-          <div className="text-white text-2xl font-bold bg-black/30 px-6 py-3 rounded-lg backdrop-blur-sm border border-mint/20">
+        <div className="flex items-center justify-center gap-2 md:gap-8 mb-12">
+          <div className="text-white text-sm md:text-2xl font-bold bg-black/30 px-3 py-2 md:px-6 md:py-3 rounded-lg backdrop-blur-sm border border-mint/20">
             HOME
           </div>
-          <div className="text-4xl text-mint">×</div>
-          <div className="text-white text-2xl font-bold bg-black/30 px-6 py-3 rounded-lg backdrop-blur-sm border border-mint/20">
+          <div className="text-2xl md:text-4xl text-mint">×</div>
+          <div className="text-white text-sm md:text-2xl font-bold bg-black/30 px-3 py-2 md:px-6 md:py-3 rounded-lg backdrop-blur-sm border border-mint/20">
             TikTok
           </div>
-          <div className="text-4xl text-mint">×</div>
-          <div className="text-white text-2xl font-bold bg-black/30 px-6 py-3 rounded-lg backdrop-blur-sm border border-mint/20">
+          <div className="text-2xl md:text-4xl text-mint">×</div>
+          <div className="text-white text-sm md:text-2xl font-bold bg-black/30 px-3 py-2 md:px-6 md:py-3 rounded-lg backdrop-blur-sm border border-mint/20">
             CapCut
           </div>
         </div>
