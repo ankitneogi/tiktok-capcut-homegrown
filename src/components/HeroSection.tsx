@@ -42,8 +42,13 @@ const HeroSection = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
           Powered by CapCut. Delivered by <strong className="text-mint">HOME</strong>, an official TikTok partner.
+        </p>
+
+        {/* Program Description */}
+        <p className="text-lg md:text-xl text-white font-medium mb-12 max-w-4xl mx-auto leading-relaxed">
+          The only program in which you earn by editing your content with CapCut, without new dedicated content needed.
         </p>
 
         {/* CTA Button */}
@@ -54,13 +59,6 @@ const HeroSection = () => {
         >
           Apply Now
         </Button>
-
-        {/* Replaced Video Teaser with Text */}
-        <div className="mt-16 relative max-w-3xl mx-auto">
-          <p className="text-2xl md:text-3xl text-white font-semibold leading-relaxed bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-mint/20">
-            The only program in which you earn by editing your content with CapCut, without new dedicated content needed.
-          </p>
-        </div>
       </div>
     </section>
   );

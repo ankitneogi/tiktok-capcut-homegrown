@@ -15,32 +15,32 @@ const successStories = [
   {
     id: 3,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7521517452514331917",
+    url: "https://www.tiktok.com/embed/v2/7521517452514331917",
   },
   {
     id: 4,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7525482001982295318",
+    url: "https://www.tiktok.com/embed/v2/7525482001982295318",
   },
   {
     id: 5,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7532641811492261134",
+    url: "https://www.tiktok.com/embed/v2/7532641811492261134",
   },
   {
     id: 6,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7533397043235032333",
+    url: "https://www.tiktok.com/embed/v2/7533397043235032333",
   },
   {
     id: 7,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7543735414755069215",
+    url: "https://www.tiktok.com/embed/v2/7543735414755069215",
   },
   {
     id: 8,
     videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/7547042807316679959",
+    url: "https://www.tiktok.com/embed/v2/7547042807316679959",
   },
 ];
 
