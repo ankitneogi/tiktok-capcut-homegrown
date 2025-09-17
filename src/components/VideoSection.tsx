@@ -8,9 +8,16 @@ const VideoSection = () => {
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Hear From <span className="text-mint">HOME's Leadership</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
             Our Head of Growth explains why TikTok trusts HOME to deliver exclusive creator programs and drive real results.
           </p>
+          
+          {/* Program Description */}
+          <div className="bg-gradient-to-r from-mint/10 to-transparent border border-mint/20 rounded-2xl p-6 max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-white font-bold leading-relaxed">
+              The TikTok x CapCut Program is the only program where you can earn by editing your existing content with CapCut — no new dedicated content needed.
+            </p>
+          </div>
         </div>
 
         <div className="relative">

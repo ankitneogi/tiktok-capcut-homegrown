@@ -6,43 +6,65 @@ const SuccessStoriesSection = () => {
       title: "Swim Glowup",
       views: "1.2M views in 3 days",
       engagement: "45K",
-      type: "Transformation",
+      type: "YouTube",
+      videoId: "dQw4w9WgXcQ", // YouTube video ID
       gradient: "from-blue-500/20 to-mint/20"
     },
     {
       title: "AI Miss Universe",
-      views: "+20k followers gained",
+      views: "+20k followers gained", 
       engagement: "89K",
-      type: "AI Content",
+      type: "YouTube",
+      videoId: "dQw4w9WgXcQ", // YouTube video ID
       gradient: "from-purple-500/20 to-mint/20"
     },
     {
       title: "Ghibli Filters",
       views: "Viral across TikTok",
       engagement: "156K", 
-      type: "Filter Effect",
+      type: "TikTok",
+      videoId: "7234567890123456789", // TikTok video ID
       gradient: "from-green-500/20 to-mint/20"
     },
     {
       title: "Trending Dance",
       views: "850K views",
       engagement: "67K",
-      type: "Dance Trend",
+      type: "TikTok",
+      videoId: "7234567890123456790",
       gradient: "from-pink-500/20 to-mint/20"
     },
     {
       title: "POV Story CapCut Edit",
       views: "10K shares",
       engagement: "234K",
-      type: "Storytelling",
+      type: "TikTok",
+      videoId: "7234567890123456791",
       gradient: "from-orange-500/20 to-mint/20"
     },
     {
       title: "Creative Transition Reel",
       views: "2.1M verified views",
       engagement: "145K",
-      type: "Transitions",
+      type: "TikTok",
+      videoId: "7234567890123456792",
       gradient: "from-red-500/20 to-mint/20"
+    },
+    {
+      title: "Viral CapCut Template",
+      views: "3.5M views",
+      engagement: "278K",
+      type: "TikTok", 
+      videoId: "7234567890123456793",
+      gradient: "from-teal-500/20 to-mint/20"
+    },
+    {
+      title: "Trending Audio Edit",
+      views: "1.8M views",
+      engagement: "189K",
+      type: "TikTok",
+      videoId: "7234567890123456794",
+      gradient: "from-indigo-500/20 to-mint/20"
     }
   ];
 
@@ -59,22 +81,29 @@ const SuccessStoriesSection = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8">
-          {stories.slice(0, 3).map((story, index) => (
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-8">
+          {stories.slice(0, 4).map((story, index) => (
             <MobileVideoCard key={index} story={story} />
           ))}
         </div>
-        <div className="hidden md:grid md:grid-cols-3 gap-8">
-          {stories.slice(3, 6).map((story, index) => (
-            <MobileVideoCard key={index + 3} story={story} />
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+          {stories.slice(4, 8).map((story, index) => (
+            <MobileVideoCard key={index + 4} story={story} />
+          ))}
+        </div>
+
+        {/* Tablet Grid */}
+        <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6">
+          {stories.map((story, index) => (
+            <MobileVideoCard key={index} story={story} />
           ))}
         </div>
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory">
+          <div className="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory px-4">
             {stories.map((story, index) => (
-              <div key={index} className="flex-none w-80 snap-center">
+              <div key={index} className="flex-none w-72 snap-center">
                 <MobileVideoCard story={story} />
               </div>
             ))}
@@ -95,19 +124,41 @@ const SuccessStoriesSection = () => {
 };
 
 const MobileVideoCard = ({ story }: { story: any }) => {
+  const renderVideoEmbed = () => {
+    if (story.type === "YouTube") {
+      return (
+        <iframe
+          src={`https://www.youtube.com/embed/${story.videoId}?autoplay=0&mute=1&controls=1&showinfo=0&rel=0`}
+          className="absolute inset-0 w-full h-full object-cover"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      );
+    } else {
+      return (
+        <iframe
+          src={`https://www.tiktok.com/embed/v2/${story.videoId}?lang=en-US`}
+          className="absolute inset-0 w-full h-full object-cover"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      );
+    }
+  };
+
   return (
     <div className="group relative">
       {/* Mobile Frame */}
       <div className="relative bg-black rounded-[3rem] p-2 border-4 border-gray-800 shadow-2xl">
         <div className="relative bg-gradient-to-b from-black to-gray-900 rounded-[2.5rem] overflow-hidden aspect-[9/16] border border-gray-700">
           {/* Video Content Area */}
-          <div className={`absolute inset-0 bg-gradient-to-b ${story.gradient} flex items-center justify-center`}>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-mint/20 transition-colors duration-300 cursor-pointer">
-                <Play className="w-8 h-8 text-mint fill-mint" />
-              </div>
-              <p className="text-white/80 text-sm">{story.type}</p>
-            </div>
+          <div className="relative w-full h-full">
+            {renderVideoEmbed()}
+            
+            {/* Overlay for mobile styling */}
+            <div className={`absolute inset-0 bg-gradient-to-b ${story.gradient} opacity-20 pointer-events-none`}></div>
           </div>
 
           {/* TikTok UI Elements */}
