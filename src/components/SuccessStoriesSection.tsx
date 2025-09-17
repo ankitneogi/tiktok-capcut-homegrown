@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./SuccessStoriesSection.module.css";
 
-// Example video data structure. Update as needed.
 const successStories = [
   {
     id: 1,
@@ -10,36 +9,53 @@ const successStories = [
   },
   {
     id: 2,
-    videoType: "tiktok",
-    url: "https://www.tiktok.com/embed/1234567890123456789",
+    videoType: "youtube",
+    url: "https://www.youtube.com/embed/FcUjdP2Ir-0",
   },
-  // Add more stories as needed
+  {
+    id: 3,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7521517452514331917",
+  },
+  {
+    id: 4,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7525482001982295318",
+  },
+  {
+    id: 5,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7532641811492261134",
+  },
+  {
+    id: 6,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7533397043235032333",
+  },
+  {
+    id: 7,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7543735414755069215",
+  },
+  {
+    id: 8,
+    videoType: "tiktok",
+    url: "https://www.tiktok.com/embed/7547042807316679959",
+  },
 ];
 
-function MobileVideoCard({ url, videoType }: { url: string; videoType: string }) {
+function MobileVideoCard({ url }: { url: string }) {
   return (
-    <div className={styles.videoCard}>
-      {videoType === "youtube" ? (
+    <div className={styles.phoneFrame}>
+      <div className={styles.videoWrapper}>
         <iframe
-          width="100%"
-          height="315"
           src={url}
           title="Success Story Video"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
-      ) : (
-        <iframe
-          width="100%"
-          height="600"
-          src={url}
-          title="Success Story Video"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
-      )}
+      </div>
     </div>
   );
 }
@@ -47,10 +63,10 @@ function MobileVideoCard({ url, videoType }: { url: string; videoType: string })
 export default function SuccessStoriesSection() {
   return (
     <section className={styles.successStoriesSection}>
-      <h2>Success Stories</h2>
+      <h2>Creator Success Stories</h2>
       <div className={styles.storiesGrid}>
         {successStories.map((story) => (
-          <MobileVideoCard key={story.id} url={story.url} videoType={story.videoType} />
+          <MobileVideoCard key={story.id} url={story.url} />
         ))}
       </div>
     </section>
