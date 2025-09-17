@@ -60,10 +60,10 @@ export default function SuccessStoriesSection() {
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-background to-background/95">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-12">
-          Creator Success Stories
+        <h2 className="text-5xl font-black text-white mb-6 text-center">
+          Creator Success <span className="text-mint">Stories</span>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {successStories.map((story) => (
             <MobileVideoCard key={story.id} url={story.url} />
           ))}
