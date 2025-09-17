@@ -13,7 +13,7 @@ export default function VideoSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Text */}
           <div className="space-y-6 flex items-center">
-            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white-800 leading-relaxed">
               Join the TikTok × CapCut Monetization Program 🎉 Create your usual content with CapCut, post with program hashtags, and earn up to $2,000 per video - all powered by TikTok and managed by HOME.
             </p>
           </div>
