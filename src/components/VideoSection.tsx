@@ -11,52 +11,36 @@ const VideoSection = () => {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
             Our Head of Growth explains why TikTok trusts HOME to deliver exclusive creator programs and drive real results.
           </p>
-          
-          {/* Program Description */}
-          <div className="bg-gradient-to-r from-mint/10 to-transparent border border-mint/20 rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-            <p className="text-lg md:text-xl text-white font-bold leading-relaxed">
-              The TikTok x CapCut Program is the only program where you can earn by editing your existing content with CapCut — no new dedicated content needed.
-            </p>
-          </div>
         </div>
 
-        <div className="relative">
-          {/* Video Container */}
-          <div className="relative bg-black rounded-3xl overflow-hidden border-2 border-mint/30 shadow-2xl">
-            <div className="aspect-video bg-gradient-teal relative">
-              {/* Video Placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 mx-auto hover:bg-mint/20 transition-colors duration-300 cursor-pointer">
-                    <Play className="w-10 h-10 text-mint fill-mint" />
-                  </div>
-                  <h3 className="text-white font-bold text-xl mb-2">Video from Head of Growth at HOME</h3>
-                  <p className="text-white/80">Click to watch the full program overview</p>
-                </div>
+        {/* Text and Video Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Text Block */}
+          <div className="order-1 md:order-1">
+            <div className="bg-gradient-to-r from-mint/10 to-transparent border border-mint/20 rounded-2xl p-6 md:p-8">
+              <p className="text-lg md:text-2xl text-white font-bold leading-relaxed">
+                The only program in which you earn by editing your content with CapCut, without new dedicated content needed.
+              </p>
+            </div>
+          </div>
+
+          {/* YouTube Video */}
+          <div className="order-2 md:order-2">
+            <div className="relative bg-black rounded-3xl overflow-hidden border-2 border-mint/30 shadow-2xl">
+              <div className="aspect-[9/16] md:aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/FcUjdP2Ir-0"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
               
               {/* Video Overlay Info */}
               <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-lg px-4 py-2 flex items-center gap-3">
                 <Users className="w-5 h-5 text-mint" />
                 <span className="text-white text-sm font-medium">Official TikTok Partner</span>
-              </div>
-
-              <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg px-4 py-2">
-                <span className="text-mint text-sm font-bold">▶ 3:24</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Caption */}
-          <div className="mt-8 text-center">
-            <p className="text-lg text-gray-300 italic">
-              "HOME's partnership with TikTok gives creators unprecedented access to platform insights and exclusive opportunities that simply aren't available elsewhere."
-            </p>
-            <div className="mt-4 flex items-center justify-center gap-3">
-              <div className="w-12 h-12 bg-gradient-mint rounded-full"></div>
-              <div className="text-left">
-                <p className="text-white font-bold">Sarah Chen</p>
-                <p className="text-gray-400 text-sm">Head of Growth, HOME</p>
               </div>
             </div>
           </div>

@@ -6,16 +6,16 @@ const SuccessStoriesSection = () => {
       title: "Swim Glowup",
       views: "1.2M views in 3 days",
       engagement: "45K",
-      type: "YouTube",
-      videoId: "dQw4w9WgXcQ", // YouTube video ID
+      type: "TikTok",
+      videoId: "7521517452514331917",
       gradient: "from-blue-500/20 to-mint/20"
     },
     {
       title: "AI Miss Universe",
       views: "+20k followers gained", 
       engagement: "89K",
-      type: "YouTube",
-      videoId: "dQw4w9WgXcQ", // YouTube video ID
+      type: "TikTok",
+      videoId: "7525482001982295318",
       gradient: "from-purple-500/20 to-mint/20"
     },
     {
@@ -23,7 +23,7 @@ const SuccessStoriesSection = () => {
       views: "Viral across TikTok",
       engagement: "156K", 
       type: "TikTok",
-      videoId: "7234567890123456789", // TikTok video ID
+      videoId: "7532641811492261134",
       gradient: "from-green-500/20 to-mint/20"
     },
     {
@@ -31,7 +31,7 @@ const SuccessStoriesSection = () => {
       views: "850K views",
       engagement: "67K",
       type: "TikTok",
-      videoId: "7234567890123456790",
+      videoId: "7533397043235032333",
       gradient: "from-pink-500/20 to-mint/20"
     },
     {
@@ -39,7 +39,7 @@ const SuccessStoriesSection = () => {
       views: "10K shares",
       engagement: "234K",
       type: "TikTok",
-      videoId: "7234567890123456791",
+      videoId: "7543735414755069215",
       gradient: "from-orange-500/20 to-mint/20"
     },
     {
@@ -47,24 +47,8 @@ const SuccessStoriesSection = () => {
       views: "2.1M verified views",
       engagement: "145K",
       type: "TikTok",
-      videoId: "7234567890123456792",
+      videoId: "7547042807316679959",
       gradient: "from-red-500/20 to-mint/20"
-    },
-    {
-      title: "Viral CapCut Template",
-      views: "3.5M views",
-      engagement: "278K",
-      type: "TikTok", 
-      videoId: "7234567890123456793",
-      gradient: "from-teal-500/20 to-mint/20"
-    },
-    {
-      title: "Trending Audio Edit",
-      views: "1.8M views",
-      engagement: "189K",
-      type: "TikTok",
-      videoId: "7234567890123456794",
-      gradient: "from-indigo-500/20 to-mint/20"
     }
   ];
 
@@ -81,14 +65,14 @@ const SuccessStoriesSection = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-8">
-          {stories.slice(0, 4).map((story, index) => (
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6 mb-8">
+          {stories.slice(0, 3).map((story, index) => (
             <MobileVideoCard key={index} story={story} />
           ))}
         </div>
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6">
-          {stories.slice(4, 8).map((story, index) => (
-            <MobileVideoCard key={index + 4} story={story} />
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6">
+          {stories.slice(3, 6).map((story, index) => (
+            <MobileVideoCard key={index + 3} story={story} />
           ))}
         </div>
 
